@@ -1,0 +1,14 @@
+    @Query("{$and: [{$or: [{'expirationDate': {$lte: ?0}}, {'deleted': true}, {'active': false}]}]}")
+    List<PhantomVideoFileMetaData> findVideosForPIIProcessing(Date date);
+
+
+
+List<PhantomVideoFileMetaData> piiPhantomVideoFileMetaData = videoRepository.findVideosForPIIProcessing(date);
+
+
+piiPhantomVideoFileMetaData = {ArrayList@18087}  size = 5
+ 0 = {PhantomVideoFileMetaData@18093} "PhantomVideoFileMetaData(fileSize=17664, duration=4, resourceLocation=geneva, subtitles=null, subtitlesPresent=null, liveStream=null, uploadStatus=true, uploadId=e44034ba-f5bf-4c5f-bc76-15ba8ebb6f55, videoStatus=VideoStatus{display=processing_completed, code=4}, fileName=sample_iso6.mp4, vbtURL=null, disableWatermark=null, additionalMeta=null, reservationId=null, audioDescription=false, keywords=null, miscInfo=MiscellaneousInfo(recordedDate=null))"
+ 1 = {PhantomVideoFileMetaData@18094} "PhantomVideoFileMetaData(fileSize=null, duration=1, resourceLocation=null, subtitles=null, subtitlesPresent=null, liveStream=true, uploadStatus=null, uploadId=null, videoStatus=null, fileName=null, vbtURL=null, disableWatermark=null, additionalMeta=AdditionalMeta [urls=[], advertisementStartDate=Mon Oct 24 22:15:00 PDT 2022, durationOfEvent=null, livestreamVerificationGroups=[], eventStatus=[]], reservationId=a959dea9-6c57-422f-bc3c-e08a772bce64, audioDescription=false, keywords=null, miscInfo=null)"
+ 2 = {PhantomVideoFileMetaData@18095} "PhantomVideoFileMetaData(fileSize=null, duration=null, resourceLocation=null, subtitles=null, subtitlesPresent=null, liveStream=null, uploadStatus=null, uploadId=null, videoStatus=null, fileName=null, vbtURL=null, disableWatermark=null, additionalMeta=AdditionalMeta [urls=[], advertisementStartDate=Thu Aug 04 00:10:51 PDT 2022, durationOfEvent=1, livestreamVerificationGroups=[], eventStatus=[EventStatus{display=event_created, code=0}]], reservationId=8198984a-f562-489b-a737-7e7cb0dc9f69, audioDescription=false, keywords=null, miscInfo=null)"
+ 3 = {ProStreamEventMetadata@18096} "ProStreamEventMetadata(status=activated, inputDetails=OtherInputDetails(link=null), location=Location(id=b8a7a59d-5d53-40f7-b8fa-ae46be573017, name=SCV, supportedFeatures=Location.SupportedFeatures(record=true, publishToPhantom=false), timeZone=America/Los_Angeles, email=applecast-dev@group.apple.com), additionalComments=null, sharingDetails=null, setupRejectedReason=null, output=[Stream], notificationEmail=[spithani@apple.com], creatorEmailId=spithani@apple.com)"
+ 4 = {PhantomVideoFileMetaData@18097} "PhantomVideoFileMetaData(fileSize=13591720, duration=240, resourceLocation=geneva, subtitles=null, subtitlesPresent=null, liveStream=null, uploadStatus=true, uploadId=1cc5a2a8-5074-4e9e-95bc-3182124442b7, videoStatus=VideoStatus{display=processing_completed, code=4}, fileName=video.mp4, vbtURL=null, disableWatermark=null, additionalMeta=null, reservationId=null, audioDescription=false, keywords=null, miscInfo=null)"
